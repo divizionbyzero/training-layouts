@@ -1,0 +1,74 @@
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
+}
+body, html {
+    height: 100%;
+}
+.wrap {
+    height: auto;
+    min-height: 100%;
+    margin:0 20px;
+}
+header {
+    height: 150px;
+    background-color: cadetblue;
+
+}
+
+.main {
+    margin-top:10px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse nowrap;
+}
+.left, .right {
+    height: 300px;
+    margin-bottom: 10px;
+}
+.left {
+    position: relative;
+    background-color: #777;
+    width: 700px;
+
+}
+.right {
+    background-color: #999;
+    width: 40%;
+    margin-left: 10px;
+}
+.footer {
+    position: relative;
+    margin: -150px 20px 0 20px;
+    height: 150px;
+    background-color: cadetblue;
+}
+
+@media screen and (max-width: 620px) {
+    .main {
+        flex-flow: column;
+        justify-content: space-around;
+    }
+    .left, .right {
+        width: auto;
+        height: 250px;
+    }
+    .right {
+        margin-left: 0;
+    }
+}
+/*two stretch columns*/

@@ -54,6 +54,45 @@ header {
     height: 150px;
     background-color: cadetblue;
 }
+.onecolumn{
+    width:100%;
+    min-height: 300px;
+    background-color: #777;
+}
+
+.list-of-tasks {
+    display: inline-flex;
+    flex-flow: row wrap;
+}
+
+.list-of-tasks>ul {
+    display: inline-flex;
+    flex-flow: column wrap;
+    color: white;
+    margin:10px;
+    text-decoration: none;
+}
+
+.list-of-tasks>ul>li {
+    background-color: cadetblue;
+    font-size: 0.17em;
+    font-style: normal;
+    margin:10px;
+    width: 250px;
+    box-sizing: border-box;
+    border: 5px solid white;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.list-of-tasks>ul>li>a {
+    text-decoration: none;
+}
+
+.list-of-tasks>ul>li:hover {
+    background-color: #528A8C;
+    border: 5px solid #DDD;
+}
 
 @media screen and (max-width: 900px) {
     .left, .right {
@@ -69,7 +108,6 @@ header {
         font-size: 60%;
     }
 }
-
 }
 
 /*two stretch columns*/

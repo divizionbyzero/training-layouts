@@ -7,8 +7,8 @@
     z-index:999;
     background-color: rgba(255,255,255,.7);
     border-radius: 2px;
-    top:0;
-    right: 20px;
+    top:70px;
+    right: 25px;
 }
 
 #div1, #div2, #div3 {
@@ -70,4 +70,26 @@ transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     cursor: pointer;
     box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
     color:#666;
+}
+
+details  {
+    display: inline-block;
+    font-size: 0.4em;
+    position:absolute;
+    top:20px;
+    right:25px;
+    z-index:999;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+details[open] {
+    background-color: lawngreen;
+}
+
+
+.name_summary {
+    color: #555;
 }

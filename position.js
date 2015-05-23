@@ -2,7 +2,7 @@
  * Created by hele on 21.05.2015.
  */
 $(document).ready(function(){
-    $("#sel").change(function () {
+    $("#but").click(function () {
         var a = $('#sel>option:selected').text();
         var b = $('#div-sel>option:selected').text();
         var t = $("#top").val()+"px";
@@ -15,11 +15,10 @@ $(document).ready(function(){
     });
     $("li[id^='lin'],li[id^='rad'] ").hover(
         function () {
-      $(this).text($(this).css("background-image"));
-            $(this).css("background-color","rgba(150,150,150,0.7)");
+      $(this).html("<span>"+$(this).css("background-image")+"</span>");
+            //$(this).css("background-color","rgba(150,150,150,0.7)");
 },
         function () {
             $(this).text("");
-            $(this).css("background-color","rgba(0,0,0,0)");
         });
 });

@@ -1,37 +1,3 @@
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.clearfix {
-    *zoom: 1;
-}
-body, html {
-    height: 100%;
-}
-.wrap {
-    height: auto;
-    min-height: 100%;
-    margin:0 20px;
-}
-header {
-    height: 150px;
-    background-color: cadetblue;
-}
-
-.main {
-    margin-top:10px;
-    padding-bottom: 150px;
-}
 
 .left, .right {
     height: 200px;
@@ -48,12 +14,7 @@ header {
     float:right;
     background-color: #888;
 }
-.footer {
-    position: relative;
-    margin: -150px 20px 0 20px;
-    height: 150px;
-    background-color: cadetblue;
-}
+
 .onecolumn{
     width:100%;
     min-height: 300px;

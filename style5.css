@@ -1,93 +1,4 @@
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
 
-.clearfix:after {
-    clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.clearfix {
-    *zoom: 1;
-}
-body, html {
-    height: 100%;
-}
-.wrap {
-    height: auto;
-    min-height: 100%;
-    margin:0 20px;
-    color: #656565;
-}
-header {
-    height: 150px;
-    background-color: #888;
-}
-
-.header>span, .footer>span {
-    line-height: 150px;
-    text-shadow: rgb(101, 101, 101) 1px 1px,
-    rgb(101, 101, 101) 2px 2px,
-    rgb(101, 101, 101) 3px 3px,
-    rgb(101, 101, 101) 4px 4px,
-    rgb(101, 101, 101) 5px 5px,
-    rgb(101, 101, 101) 6px 6px,
-    rgb(101, 101, 101) 7px 7px,
-    rgb(101, 101, 101) 8px 8px,
-    rgb(101, 101, 101) 9px 9px,
-    rgb(101, 101, 101) 10px 10px,
-    rgb(101, 101, 101) 11px 11px,
-    rgb(101, 101, 101) 12px 12px,
-    rgb(101, 101, 101) 13px 13px,
-    rgb(101, 101, 101) 14px 14px,
-    rgb(101, 101, 101) 15px 15px,
-    rgb(101, 101, 101) 16px 16px,
-    rgb(101, 101, 101) 17px 17px,
-    rgb(101, 101, 101) 18px 18px,
-    rgb(101, 101, 101) 19px 19px,
-    rgb(101, 101, 101) 20px 20px,
-    rgb(101, 101, 101) 21px 21px,
-    rgb(112, 112, 112) 22px 22px,
-    rgb(124, 124, 124) 23px 23px,
-    rgb(136, 136, 136) 24px 24px;
-    background-color: rgb(136, 136, 136);
-    height: 100%;
-    width: 100%;
-    font-size: 75px;
-    text-align: center;
-}
-
-.header>span::before, .footer>span::before, .header>span::after, .footer>span::after {
-    content: '\25c9';
-    font-size: 0.5em;
-    display: inline-block;
-    padding: 0 15px;
-    margin-top:-10px;
-    vertical-align: middle;
-    text-shadow:rgb(101, 101, 101) 1px 1px,
-    rgb(101, 101, 101) 2px 2px,
-    rgb(101, 101, 101) 3px 3px,
-    rgb(112, 112, 112) 4px 4px,
-    rgb(124, 124, 124) 5px 5px,
-    rgb(136, 136, 136) 6px 6px;
-}
-
-.main {
-    margin-top:10px;
-    padding-bottom: 150px;
-}
-
-.footer {
-    position: relative;
-    margin: -150px 20px 0 20px;
-    height: 150px;
-    background-color: #888;
-}
 .onecolumn{
     width:100%;
     min-height: 300px;
@@ -95,10 +6,11 @@ header {
 }
 
 .linear, .radial {
-    height: 580px;
+    height: 630px;
     /*background-color: white;*/
     padding: 20px;
     background-clip: content-box;
+    font-size:0.9em;
 
 }
 
@@ -106,19 +18,20 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    font-size: 0.15em;
+
     white-space: pre-line;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
     text-overflow: clip;
 }
+
 .flex>li {
-    display:inline-block;
+    position: relative;
     height: 150px;
     width: 30%;
     margin:15px 0;
     border: white 5px solid;
-
+    border-radius: 2px;
     box-shadow: rgb(101, 101, 101) 1px 1px,
     rgb(101, 101, 101) 2px 2px,
     rgb(101, 101, 101) 3px 3px,
@@ -135,13 +48,26 @@ header {
     background-color: rgb(136, 136, 136);
 }
 
+.flex>li>span {
+    display: inline-block;
+    font-size: 0.11em;
+    padding: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color:#777;
+    line-height: 1.1em;
+
+}
 div:first-of-type {
     margin-bottom: 10px;
 }
 
 li[id^="lin"], li[id^="rad"] {
-    color:white;
-    background-blend-mode: darken;
+
+    /*background-blend-mode: darken;*/
 }
 
 #lin1 {

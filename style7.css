@@ -1,0 +1,21 @@
+.onecolumn{
+    width:100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+table, td {
+    border:1px solid black;
+}
+
+table {
+    margin: 20px 10vw;
+}
+
+td {
+    padding: 5px;
+}
+
+.align-cent {
+    text-align: center;
+}

@@ -5,52 +5,58 @@
     margin-bottom: 10px;
 
 }
-.left {
-    float:left;
-    background-color: #777;
 
+.left {
+    float: left;
+    background-color: #777;
 }
+
 .right {
-    float:right;
+    float: right;
     background-color: #888;
 }
 
-.onecolumn{
-    width:100%;
-    min-height: 300px;
+.onecolumn {
+    width: 100%;
     background-color: #777;
+}
+
+#list-of-lists {
+    display: flex;
+    justify-content: center;
 }
 
 .list-of-tasks {
     display: inline-flex;
     flex-flow: row wrap;
+    justify-content: center;
 }
 
-.list-of-tasks>ul {
+.list-of-tasks > ul {
     display: inline-flex;
     flex-flow: column wrap;
     color: white;
-    margin:10px;
+    margin: 10px;
     text-decoration: none;
 }
 
-.list-of-tasks>ul>li {
+.list-of-tasks > ul > li {
     background-color: cadetblue;
-    font-size: 0.17em;
+    font-size: 1.3em;
     font-style: normal;
-    margin:10px;
-    width: 250px;
+    margin: 10px;
+    width: 400px;
     box-sizing: border-box;
     border: 5px solid white;
     border-radius: 3px;
-    padding: 3px;
+    padding: 5px;
 }
 
-.list-of-tasks>ul>li>a {
+.list-of-tasks > ul > li > a {
     text-decoration: none;
 }
 
-.list-of-tasks>ul>li:hover {
+.list-of-tasks > ul > li:hover {
     background-color: #528A8C;
     border: 5px solid #DDD;
 }
@@ -59,16 +65,17 @@
     .left, .right {
         width: 48.5%;
 
-}
+    }
 
-@media screen and (max-width: 300px){
-    .header {
-        font-size: 100%;
+    @media screen and (max-width: 300px) {
+        .header {
+            font-size: 100%;
+        }
+
+        .left, .right {
+            font-size: 60%;
+        }
     }
-    .left, .right {
-        font-size: 60%;
-    }
-}
 }
 
 /*two stretch columns*/

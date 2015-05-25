@@ -3,6 +3,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 html, body, div, span, applet, object, iframe,
 p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,10 +20,8 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    /*font-size: 130%;*/
-    /*text-align: center;*/
     font-family: Times, 'New Century Schoolbook', serif;
-    color:white;
+    color: white;
     vertical-align: baseline;
 
 }
@@ -30,25 +29,31 @@ time, mark, audio, video {
 img {
     max-width: 100%;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -72,12 +77,18 @@ table {
 
 }
 
-.clearfix { display: inline-block; }
+.clearfix {
+    display: inline-block;
+}
 
 /* start commented backslash hack \*/
 
-* html .clearfix { height: 1%; }
+* html .clearfix {
+    height: 1%;
+}
 
-.clearfix { display: block; }
+.clearfix {
+    display: block;
+}
 
 /* close commented backslash hack */

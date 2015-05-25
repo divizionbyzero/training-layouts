@@ -7,35 +7,93 @@
     <link rel="stylesheet" href="style7.css">
     <title></title>
     <script src="jquery-1.11.3.min.js"></script>
-    <script src="position.js"></script>
+    <script src="units.js"></script>
 </head>
 <body>
 <div class="wrap clearfix">
-    <header class="header"><span>CSS SLIDER</span>
+    <header class="header"><span>CSS UNITS</span>
     </header>
     <div class="main">
-    <article class="onecolumn">
-        <table>
-            <tr class="align-cent"><td colspan="2">Относительные единицы</td></tr>
-            <tr><td>EM</td><td>Высота шрифта текущего элемента</td></tr>
-            <tr><td>REM</td><td>Высота шрифта html тега</td></tr>
-            <tr><td>EX</td><td>Высота символа x</td></tr>
-            <tr><td>PX</td><td>Пиксель - точка на экране пользователя, физическая величина которой зависит от разрешения устройства. В каких бы единицах измерения мы бы не писали код, он приводится именно к px.</td></tr>
-            <tr><td>%</td><td>Процент относительно размера соответствующего свойства родителя. При уменьшении ширины родителя, уменьшается и ширина элемента, но не его шрифт.</td></tr>
-            <tr><td>VH</td><td>Viewport height - высота области просмотра (1vh = 1% от высоты области просмотра)</td></tr>
-            <tr><td>VW</td><td>Viewport width - ширина области просмотра (1vw = 1% от ширины области просмотра)</td></tr>
-            <tr><td>VMIN</td><td>Viewport minimal - минимальная величина из vh и vw</td></tr>
-            <tr><td>VMAX</td><td>Viewport maximal - максимальная величина из vh и vw</td></tr>
-            <tr><td colspan="2" class="align-cent">Абсолютные единицы</td></tr>
-            <tr><td>IN</td><td>Дюйм (1 дюйм равен 2,54 см)</td></tr>
-            <tr><td>CM</td><td>Сантиметр</td></tr>
-            <tr><td>MM</td><td>Миллиметр</td></tr>
-            <tr><td>PT</td><td>Пункт (1 пункт равен 1/72 дюйма)</td></tr>
-            <tr><td>PC</td><td>Пика (1 пика равна 12 пунктам)</td></tr>
-            <tr><td colspan="2" class="align-cent">Функция calc()</td></tr>
-
-        </table>
-    </article>
+        <article class="onecolumn">
+            <table>
+                <tr class="align-cent">
+                    <td colspan="3">Relative units</td>
+                </tr>
+                <tr>
+                    <td>EM</td>
+                    <td class="em">font size of the element</td>
+                    <td><input type="text" size="5" id="em" placeholder="1"/></td>
+                </tr>
+                <tr>
+                    <td>REM</td>
+                    <td class="rem">font size of the root element</td>
+                    <td><input type="text" size="5" id="rem" placeholder="1"/></td>
+                </tr>
+                <tr>
+                    <td>EX</td>
+                    <td class="ex">x-height of the element's font</td>
+                    <td><input type="text" size="5" id="ex" placeholder="2.3"/></td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td class="percent">font size of the element in percents</td>
+                    <td><input type="text" size="5" id="percent" placeholder="100"/></td>
+                </tr>
+                <tr>
+                    <td>VH</td>
+                    <td class="vh">1% of viewport's height</td>
+                    <td><input type="text" size="5" id="vh" placeholder="2.3"/></td>
+                </tr>
+                <tr>
+                    <td>VW</td>
+                    <td class="vw">1% of viewport's width</td>
+                    <td><input type="text" size="5" id="vw" placeholder="1.9"/></td>
+                </tr>
+                <tr>
+                    <td>VMIN</td>
+                    <td class="vmin">1% of viewport's smaller dimension</td>
+                    <td><input type="text" size="5" id="vmin" placeholder="2.3"/></td>
+                </tr>
+                <tr>
+                    <td>VMAX</td>
+                    <td class="vmax">1% of viewport's larger dimension</td>
+                    <td><input type="text" size="5" id="vmax" placeholder="1.9"/></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="align-cent">Absolute units</td>
+                </tr>
+                <tr>
+                    <td>PX</td>
+                    <td class="px">pixels; 1px is equal to 1/96th of 1in</td>
+                    <td><input type="text" size="5" id="px" placeholder="16"/></td>
+                </tr>
+                <tr>
+                    <td>IN</td>
+                    <td class="in">inches; 1in is equal to 2.54cm</td>
+                    <td><input type="text" size="5" id="in" placeholder="0.17"/></td>
+                </tr>
+                <tr>
+                    <td>CM</td>
+                    <td class="cm">centimeters</td>
+                    <td><input type="text" size="5" id="cm" placeholder="0.43"/></td>
+                </tr>
+                <tr>
+                    <td>MM</td>
+                    <td class="mm">millimeters</td>
+                    <td><input type="text" size="5" id="mm" placeholder="4.3"/></td>
+                </tr>
+                <tr>
+                    <td>PT</td>
+                    <td class="pt">points; 1pt is equal to 1/72nd of 1in</td>
+                    <td><input type="text" size="5" id="pt" placeholder="12"/></td>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td class="pc">picas; 1pc is equal to 12pt</td>
+                    <td><input type="text" size="5" id="pc" placeholder="1"/></td>
+                </tr>
+            </table>
+        </article>
     </div>
 </div>
 <footer class="footer"><span>FOOTER</span></footer>

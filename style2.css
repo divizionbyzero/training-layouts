@@ -1,20 +1,23 @@
 .main {
-    margin-top:10px;
+    margin-top: 10px;
     padding-bottom: 150px;
     display: flex;
     justify-content: space-between;
     flex-flow: row-reverse nowrap;
 }
+
 .left, .right {
     height: 300px;
     margin-bottom: 10px;
 }
+
 .left {
     position: relative;
     background-color: #1a8c84;
     width: 700px;
 
 }
+
 .right {
     background-color: chartreuse;
     width: 40%;
@@ -26,12 +29,15 @@
         flex-flow: column;
         justify-content: space-around;
     }
+
     .left, .right {
         width: auto;
         height: 250px;
     }
+
     .right {
         margin-left: 0;
     }
 }
+
 /*two stretch columns*/

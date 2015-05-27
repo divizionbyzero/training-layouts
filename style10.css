@@ -1,0 +1,17 @@
+.onecolumn {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.loadjson {
+    width: 60px;
+    height:20px;
+    background-color: #1a8c84;
+    cursor: pointer;
+}
+
+td {
+    border: 1px solid white;
+    padding: 5px;
+}

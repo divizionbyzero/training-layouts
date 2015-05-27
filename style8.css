@@ -1,0 +1,47 @@
+.onecolumn{
+    width:100%;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.description-select {
+    text-align: center;
+}
+
+.lists-container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.list {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.list-item {
+    width:6%;
+    height: 40px;
+    background-color: lawngreen;
+    margin: 5px;
+}
+
+.list-item:only-of-type{
+    background-color: darkcyan;
+}
+#list-2 .list-item:nth-last-of-type(10):first-of-type{
+    background-color: darkcyan;
+}
+#list-3 .list-item:nth-last-of-type(10):first-of-type,
+#list-3 .list-item:nth-last-of-type(10):first-of-type ~ .list-item {
+    background-color: darkcyan;
+}
+
+#list-4 .list-item:nth-last-child(n+9),
+#list-4 .list-item:nth-last-child(n+9) ~ .list-item{
+    background-color: darkcyan;
+}
+
+#list-5 .list-item:nth-last-child(-n+12):first-child,
+#list-5 .list-item:nth-last-child(-n+12):first-child ~ .list-item{
+    background-color: darkcyan;
+}

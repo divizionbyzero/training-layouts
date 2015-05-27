@@ -1,0 +1,240 @@
+.onecolumn {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.container {
+    width: 80%;
+    height: 300px;
+    background-color: #aaa;
+    margin: 0 auto 25px;
+}
+
+h1 {
+    line-height: 15vh;
+}
+
+.select-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.select-item {
+    background-color: lawngreen;
+    height: 50px;
+    width: 18%;
+}
+
+.demo {
+    background-color: #1a8c84;
+    width: 20vw;
+    height: 15vh;
+    margin: 5% auto;
+}
+
+.select-item:hover {
+    background-color: #71a6c9;
+}
+
+.rotate1 {
+    -moz-transform: rotate(15deg); /* Для Firefox */
+    -ms-transform: rotate(15deg); /* Для IE */
+    -webkit-transform: rotate(15deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(15deg); /* Для Opera */
+    transform: rotate(15deg);
+}
+
+.rotate2 {
+    -moz-transform: rotate(45deg); /* Для Firefox */
+    -ms-transform: rotate(45deg); /* Для IE */
+    -webkit-transform: rotate(45deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(45deg); /* Для Opera */
+    transform: rotate(45deg);
+}
+
+.rotate3 {
+    -moz-transform: rotate(180deg); /* Для Firefox */
+    -ms-transform: rotate(180deg); /* Для IE */
+    -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(180deg); /* Для Opera */
+    transform: rotate(180deg);
+}
+
+.rotate4 {
+    -moz-transform: rotate(-45deg); /* Для Firefox */
+    -ms-transform: rotate(-45deg); /* Для IE */
+    -webkit-transform: rotate(-45deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(-45deg); /* Для Opera */
+    transform: rotate(-45deg);
+}
+
+.rotate5 {
+    -moz-transform: rotate(259deg); /* Для Firefox */
+    -ms-transform: rotate(259deg); /* Для IE */
+    -webkit-transform: rotate(259deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(259deg); /* Для Opera */
+    transform: rotate(259deg);
+}
+
+.scale1 {
+    -moz-transform: scale(1, 2); /* Для Firefox */
+    -ms-transform: scale(1, 2); /* Для IE */
+    -webkit-transform: scale(1, 2); /* Для Safari, Chrome, iOS */
+    -o-transform: scale(1, 2); /* Для Opera */
+    transform: scale(1, 2);
+}
+
+.scale2 {
+    -moz-transform: scale(2, 1); /* Для Firefox */
+    -ms-transform: scale(2, 1); /* Для IE */
+    -webkit-transform: scale(2, 1); /* Для Safari, Chrome, iOS */
+    -o-transform: scale(2, 1); /* Для Opera */
+    transform: scale(2, 1);
+}
+
+.scale3 {
+    -moz-transform: scale(1.5, 1.5); /* Для Firefox */
+    -ms-transform: scale(1.5, 1.5); /* Для IE */
+    -webkit-transform: scale(1.5, 1.5); /* Для Safari, Chrome, iOS */
+    -o-transform: scale(1.5, 1.5); /* Для Opera */
+    transform: scale(1.5, 1.5);
+}
+
+.scale4 {
+    -moz-transform: scale(0.5, 1.2); /* Для Firefox */
+    -ms-transform: scale(0.5, 1.2); /* Для IE */
+    -webkit-transform: scale(0.5, 1.2); /* Для Safari, Chrome, iOS */
+    -o-transform: scale(0.5, 1.2); /* Для Opera */
+    transform: scale(0.5, 1.2);
+}
+
+.scale5 {
+    -moz-transform: scale(1.2, 0.5); /* Для Firefox */
+    -ms-transform: scale(1.2, 0.5); /* Для IE */
+    -webkit-transform: scale(1.2, 0.5); /* Для Safari, Chrome, iOS */
+    -o-transform: scale(1.2, 0.5); /* Для Opera */
+    transform: scale(1.2, 0.5);
+}
+
+.skew1 {
+    -moz-transform: skew(15deg, 0deg); /* Для Firefox */
+    -ms-transform: skew(15deg, 0deg); /* Для IE */
+    -webkit-transform: skew(15deg, 0deg); /* Для Safari, Chrome, iOS */
+    -o-transform: skew(15deg, 0deg); /* Для Opera */
+    transform: skew(15deg, 0deg);
+}
+
+.skew2 {
+    -moz-transform: skew(45deg, 44deg); /* Для Firefox */
+    -ms-transform: skew(45deg, 44deg); /* Для IE */
+    -webkit-transform: skew(45deg, 44deg); /* Для Safari, Chrome, iOS */
+    -o-transform: skew(45deg, 44deg); /* Для Opera */
+    transform: skew(45deg, 44deg);
+}
+
+.skew3 {
+    -moz-transform: skew(-25deg, -25deg); /* Для Firefox */
+    -ms-transform: skew(-25deg, -25deg); /* Для IE */
+    -webkit-transform: skew(-25deg, -25deg); /* Для Safari, Chrome, iOS */
+    -o-transform: skew(-25deg, -25deg); /* Для Opera */
+    transform: skew(-25deg, -25deg);
+}
+
+.skew4 {
+    -moz-transform: skew(0deg, -45deg); /* Для Firefox */
+    -ms-transform: skew(0deg, -45deg); /* Для IE */
+    -webkit-transform: skew(0deg, -45deg); /* Для Safari, Chrome, iOS */
+    -o-transform: skew(0deg, -45deg); /* Для Opera */
+    transform: skew(0deg, -45deg);
+}
+
+.skew5 {
+    -moz-transform: skew(29deg, 15deg); /* Для Firefox */
+    -ms-transform: skew(29deg, 15deg); /* Для IE */
+    -webkit-transform: skew(29deg, 15deg); /* Для Safari, Chrome, iOS */
+    -o-transform: skew(29deg, 15deg); /* Для Opera */
+    transform: skew(29deg, 15deg);
+}
+
+.translate1 {
+    -moz-transform: translate(15px, 0); /* Для Firefox */
+    -ms-transform: translate(15px, 0); /* Для IE */
+    -webkit-transform: translate(15px, 0); /* Для Safari, Chrome, iOS */
+    -o-transform: translate(15px, 0); /* Для Opera */
+    transform: translate(15px, 0);
+}
+
+.translate2 {
+    -moz-transform: translate(45px, 44px); /* Для Firefox */
+    -ms-transform: translate(45px, 44px); /* Для IE */
+    -webkit-transform: translate(45px, 44px); /* Для Safari, Chrome, iOS */
+    -o-transform: translate(45px, 44px); /* Для Opera */
+    transform: translate(45px, 44px);
+}
+
+.translate3 {
+    -moz-transform: translate(-25px, -25px); /* Для Firefox */
+    -ms-transform: translate(-25px, -25px); /* Для IE */
+    -webkit-transform: translate(-25px, -25px); /* Для Safari, Chrome, iOS */
+    -o-transform: translate(-25px, -25px); /* Для Opera */
+    transform: translate(-25px, -25px);
+}
+
+.translate4 {
+    -moz-transform: translate(0, -150px); /* Для Firefox */
+    -ms-transform: translate(0, -150px); /* Для IE */
+    -webkit-transform: translate(0, -150px); /* Для Safari, Chrome, iOS */
+    -o-transform: translate(0, -150px); /* Для Opera */
+    transform: translate(0, -150px);
+}
+
+.translate5 {
+    -moz-transform: translate(29px, 15px); /* Для Firefox */
+    -ms-transform: translate(29px, 15px); /* Для IE */
+    -webkit-transform: translate(29px, 15px); /* Для Safari, Chrome, iOS */
+    -o-transform: translate(29px, 15px); /* Для Opera */
+    transform: translate(29px, 15px);
+}
+
+.matrix1 {
+    -moz-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Firefox */
+    -ms-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для IE */
+    -webkit-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Safari, Chrome, iOS */
+    -o-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Opera */
+    transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25);
+}
+
+.matrix2 {
+    -moz-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Firefox */
+    -ms-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для IE */
+    -webkit-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Safari, Chrome, iOS */
+    -o-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Opera */
+    transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25);
+}
+
+.matrix3 {
+    -moz-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Firefox */
+    -ms-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для IE */
+    -webkit-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Safari, Chrome, iOS */
+    -o-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Opera */
+    transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25);
+}
+
+.matrix4 {
+    -moz-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Firefox */
+    -ms-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для IE */
+    -webkit-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Safari, Chrome, iOS */
+    -o-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Opera */
+    transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25);
+}
+
+.matrix5 {
+    -moz-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Firefox */
+    -ms-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для IE */
+    -webkit-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Safari, Chrome, iOS */
+    -o-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25); /* Для Opera */
+    transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25);
+}
+

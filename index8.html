@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main-style.css">
+    <link rel="stylesheet" href="style8.css">
+    <title></title>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="units.js"></script>
+</head>
+<body>
+<div class="wrap clearfix">
+    <header class="header"><span>CSS SELECTORS</span>
+    </header>
+    <div class="main">
+        <article class="onecolumn">
+          <div class="lists-container">
+              <span class="description-select">Выбор единственного элемента в списке: li:only-of-type | .list-item:only-of-type | .list-item:only-child ( селект "больше-чем-один" делаем при помощи отрицания :not() )</span>
+              <ul class="list" id="list-1">
+                  <li class="list-item"></li>
+              </ul>
+              <span class="description-select">Выбор первого элемента для проверки точного кол-ва элементов в списке: .list-item:nth-last-child(10):first-child | .list-item:nth-last-of-type(10):first-child</span>
+              <ul class="list" id="list-2">
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+              </ul>
+              <span class="description-select">Выбор всех элементов, если в списке их ровно 10: .list-item:nth-last-of-type(10):first-of-type, .list-item:nth-last-of-type(10):first-of-type ~ .list-item</span>
+              <ul class="list" id="list-3">
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+              </ul>
+              <span class="description-select">Выбор всех элементов, если в списке их больше 8: .list-item:nth-last-child(n+9), .list-item:nth-last-child(n+9) ~ .list-item{</span>
+              <ul class="list" id="list-4">
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+              </ul>
+              <span class="description-select">Выбор всех элементов, если в списке их меньше 12: .list-item:nth-last-child(-n+10):first-child, .list-item:nth-last-child(-n+10):first-child ~ .list-item </span>
+              <ul class="list" id="list-5">
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+                  <li class="list-item"></li>
+              </ul>
+          </div>
+        </article>
+    </div>
+</div>
+<footer class="footer"><span>FOOTER</span></footer>
+</body>
+</html>

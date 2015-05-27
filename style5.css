@@ -48,7 +48,6 @@
 
 .flex>li>span {
     display: inline-block;
-    font-size: 0.11em;
     padding: 2px;
     background-color: white;
     position: absolute;
@@ -61,11 +60,6 @@
 }
 div:first-of-type {
     margin-bottom: 10px;
-}
-
-li[id^="lin"], li[id^="rad"] {
-
-    /*background-blend-mode: darken;*/
 }
 
 #lin1 {

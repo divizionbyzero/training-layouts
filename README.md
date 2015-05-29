@@ -1,3 +1,1 @@
-# training-layouts
-РЎС„РµСЂРёС‡РµСЃРєРёРµ Р»СЌР№Р°СѓС‚С‹ РІ РІР°РєСѓСѓРјРµ
-Some templates (only blocks without content) with flex, grid etc.
+Сферические лэйауты в вакууме Some templates (only blocks without content) with flex, grid etc.

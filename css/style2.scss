@@ -1,40 +1,36 @@
-//colors
-$color_elm_approx: #1a8c84;
-$chartreuse: chartreuse;
+@import "main-style";
+@import "style";
+$left-background: $li-background;
 
 .main {
+  @include display-content(flex, space-between, row-reverse, nowrap );
   margin-top: 10px;
   padding-bottom: 150px;
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row-reverse nowrap;
 }
+
 .left {
   height: 300px;
   margin-bottom: 10px;
   position: relative;
-  background-color: $color_elm_approx;
-  width: 700px;
-}
+  background-color: $left-background;
+  width: 700px; }
+
 .right {
   height: 300px;
   margin-bottom: 10px;
-  background-color: $chartreuse;
+  background-color: darken($left-background, 5%);
   width: 40%;
-  margin-left: 10px;
-}
+  margin-left: 10px; }
+
 @media screen and(max-width: 620px) {
   .main {
-    flex-flow: column;
-    justify-content: space-around;
+    @include display-content(flex, space-around, column, nowrap, align );
   }
-  .left {
+  .left, .right {
     width: auto;
     height: 250px;
   }
   .right {
-    width: auto;
-    height: 250px;
     margin-left: 0;
   }
 }

@@ -1,53 +1,39 @@
-//colors
-$color_tapa_approx: #777;
-$color_chartreuse_62_approx: rgba(124, 252, 0, 0.62);
-$color_blue_chill_75_approx: rgba(0, 139, 139, 0.75);
-$color_pizazz_68_approx: rgba(255, 140, 0, 0.68);
-
-//@extend-elements
-//original selectors
-//#one, #two, #three
-%extend_1 {
-    min-height: 250px;
-    background-color: $color_tapa_approx;
-    width: 32%;
-    margin-bottom: 10px;
-}
-
+@import "main-style";
+@import "style";
 
 .main {
-    margin-top: 10px;
-    padding-bottom: 150px;
-    display: flex;
-    justify-content: space-between;
+  @include display-content(flex, space-between, row-reverse, nowrap);
+  margin-top: 10px;
+  padding-bottom: 150px;
 }
-#one {
-    @extend %extend_1;
-    background-color: $color_chartreuse_62_approx;
+
+.one-flex, .two-flex, .three-flex {
+  min-height: 250px;
+  background-color: $background;
+  width: 32%;
+  margin-bottom: 10px;
 }
-#two {
-    @extend %extend_1;
-    background-color: $color_blue_chill_75_approx;
+
+.one-flex {
+  background-color: $one;
 }
-#three {
-    @extend %extend_1;
-    background-color: $color_pizazz_68_approx;
+
+.two-flex {
+  background-color: $two;
 }
-@media screen and(max-width: 640px) {
-    .main {
-        flex-flow: column wrap;
-        align-content: space-between;
-    }
-    #one {
-        width: 100%;
-        min-height: 200px;
-    }
-    #two {
-        width: 100%;
-        min-height: 200px;
-    }
-    #three {
-        width: 100%;
-        min-height: 200px;
-    }
+
+.three-flex {
+  background-color: $three;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    @include display-content(flex, space-between, column, wrap, align);
+  }
+
+  .one-flex, .two-flex, .three-flex {
+
+    width: 100%;
+    min-height: 200px;
+  }
 }

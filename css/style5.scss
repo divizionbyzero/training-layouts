@@ -1,0 +1,124 @@
+//colors
+$color_suva_gray_approx: #888;
+$white: white;
+$color_storm_dust_approx: rgb(101, 101, 101);
+$color_tapa_approx: rgb(118, 118, 118);
+$color_dolly_approx: #fcff7f;
+$color_eastern_blue_approx:  lightseagreen;
+$color_malibu_approx:  lightskyblue;
+$color_granny_smith_apple_approx:  lightgreen;
+$color_elm_approx: #1a8c84;
+$color_glacier_approx: #71a6c9;
+$color_mantis_approx: #71bc71;
+$color_chenin_approx: #d9dc71;
+
+//@extend-elements
+//original selectors
+//.linear, .radial
+%extend_1 {
+    height: 600px;
+    padding: 20px 20px 0 20px;
+    //Instead of the line below you could use @includebackground-clip($clip)
+    background-clip: content-box;
+}
+
+
+.onecolumn {
+    width: 100%;
+    min-height: 300px;
+    background-color: $color_suva_gray_approx;
+}
+.linear {
+    @extend %extend_1;
+}
+.radial {
+    @extend %extend_1;
+}
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    white-space: pre-line;
+    word-wrap: break-word;
+    text-overflow: clip;
+}
+.flex>li {
+    position: relative;
+    height: 150px;
+    width: 30%;
+    margin: 15px 0;
+    border: $white 5px solid;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 2px;
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: $color_storm_dust_approx 1px 1px, $color_storm_dust_approx 2px 2px, $color_storm_dust_approx 3px 3px, $color_storm_dust_approx 4px 4px, $color_storm_dust_approx 5px 5px, $color_storm_dust_approx 6px 6px, $color_storm_dust_approx 7px 7px, $color_storm_dust_approx 8px 8px, $color_storm_dust_approx 9px 9px, $color_storm_dust_approx 10px 10px, $color_storm_dust_approx 11px 11px, $color_tapa_approx 12px 12px, $color_suva_gray_approx 13px 13px;
+    background-color: $color_suva_gray_approx;
+}
+.flex>li>span {
+    display: inline-block;
+    padding: 2px;
+    background-color: $white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: $color_tapa_approx;
+    line-height: 1.1em;
+}
+#lin1 {
+    background: repeating-linear-gradient(-90deg, $color_eastern_blue_approx 0, $color_malibu_approx 20%, $color_granny_smith_apple_approx 50%, $color_dolly_approx 70%, $color_eastern_blue_approx 90% );
+}
+#lin2 {
+    background: linear-gradient(30deg, $color_eastern_blue_approx 0, $color_malibu_approx 20%, $color_granny_smith_apple_approx 50%, $color_dolly_approx 80% );
+}
+#lin3 {
+    background: repeating-linear-gradient(to right, $color_eastern_blue_approx 41px, $color_malibu_approx 42px, $color_malibu_approx 82px, $color_granny_smith_apple_approx 83px, $color_granny_smith_apple_approx 123px, $color_dolly_approx 124px, $color_dolly_approx 164px, $color_eastern_blue_approx 165px,lightseagreen 205px);
+}
+#lin4 {
+    background: repeating-linear-gradient(45deg, $color_malibu_approx 10%,lightgreen 15%, $color_granny_smith_apple_approx 15%, $color_dolly_approx 15%, $color_dolly_approx 20%, $color_eastern_blue_approx 20%,lightseagreen 25%);
+}
+#lin5 {
+    background: repeating-linear-gradient(lightgreen, $color_granny_smith_apple_approx 10px, $color_eastern_blue_approx 10px, $color_eastern_blue_approx 20px, $color_dolly_approx 20px, $color_dolly_approx 30px, $color_malibu_approx 30px, $color_malibu_approx 40px);
+}
+#lin6 {
+    background: linear-gradient(to right, $color_eastern_blue_approx 0, $color_malibu_approx 50%);
+}
+#lin7 {
+    background: repeating-linear-gradient(to right,lightseagreen, $color_elm_approx 41px, $color_malibu_approx 42px, $color_glacier_approx 82px, $color_granny_smith_apple_approx 83px, $color_mantis_approx 123px, $color_dolly_approx 124px, $color_chenin_approx 164px);
+}
+#lin8 {
+    background: repeating-linear-gradient(to left top,lightseagreen, $color_elm_approx 4px, $color_malibu_approx 5px, $color_glacier_approx 9px, $color_granny_smith_apple_approx 10px, $color_mantis_approx 14px, $color_dolly_approx 15px, $color_chenin_approx 19px);
+}
+#lin9 {
+    background: linear-gradient(to bottom, $color_granny_smith_apple_approx, $color_dolly_approx);
+}
+#rad1 {
+    background: repeating-radial-gradient(25% 50%, $color_eastern_blue_approx 0, $color_malibu_approx 20%, $color_granny_smith_apple_approx 50%, $color_dolly_approx 70%, $color_eastern_blue_approx 90% );
+}
+#rad2 {
+    background: radial-gradient(50% 25%, $color_eastern_blue_approx 0, $color_malibu_approx 20%, $color_granny_smith_apple_approx 50%, $color_dolly_approx 80% );
+}
+#rad3 {
+    background: repeating-radial-gradient(farthest-side at 300px 150px, $color_eastern_blue_approx 41px, $color_malibu_approx 42px, $color_malibu_approx 82px, $color_granny_smith_apple_approx 83px, $color_granny_smith_apple_approx 123px, $color_dolly_approx 124px, $color_dolly_approx 164px, $color_eastern_blue_approx 165px,lightseagreen 205px);
+}
+#rad4 {
+    background: repeating-radial-gradient(lightskyblue 10%,lightgreen 15%, $color_granny_smith_apple_approx 15%, $color_dolly_approx 15%, $color_dolly_approx 20%, $color_eastern_blue_approx 20%,lightseagreen 25%);
+}
+#rad5 {
+    background: repeating-radial-gradient(25% 50%, $color_granny_smith_apple_approx, $color_granny_smith_apple_approx 10px, $color_eastern_blue_approx 10px, $color_eastern_blue_approx 20px, $color_dolly_approx 20px, $color_dolly_approx 30px, $color_malibu_approx 30px, $color_malibu_approx 40px);
+}
+#rad6 {
+    background: radial-gradient(closest-corner at 50px 50px, $color_eastern_blue_approx 0, $color_malibu_approx 50%);
+}
+#rad7 {
+    background: repeating-radial-gradient(closest-side at 40px 50px, $color_eastern_blue_approx, $color_elm_approx 41px, $color_malibu_approx 42px, $color_glacier_approx 82px, $color_granny_smith_apple_approx 83px, $color_mantis_approx 123px, $color_dolly_approx 124px, $color_chenin_approx 164px);
+}
+#rad8 {
+    background: repeating-radial-gradient(farthest-corner at 5px 5px, $color_eastern_blue_approx, $color_elm_approx 4px, $color_malibu_approx 5px, $color_glacier_approx 9px, $color_granny_smith_apple_approx 10px, $color_mantis_approx 14px, $color_dolly_approx 15px, $color_chenin_approx 19px);
+}
+#rad9 {
+    background: radial-gradient(20% 80%,lightgreen, $color_dolly_approx);
+}
+div:first-of-type {
+    margin-bottom: 10px;
+}

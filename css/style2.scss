@@ -1,0 +1,40 @@
+//colors
+$color_elm_approx: #1a8c84;
+$chartreuse: chartreuse;
+
+.main {
+  margin-top: 10px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row-reverse nowrap;
+}
+.left {
+  height: 300px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: $color_elm_approx;
+  width: 700px;
+}
+.right {
+  height: 300px;
+  margin-bottom: 10px;
+  background-color: $chartreuse;
+  width: 40%;
+  margin-left: 10px;
+}
+@media screen and(max-width: 620px) {
+  .main {
+    flex-flow: column;
+    justify-content: space-around;
+  }
+  .left {
+    width: auto;
+    height: 250px;
+  }
+  .right {
+    width: auto;
+    height: 250px;
+    margin-left: 0;
+  }
+}

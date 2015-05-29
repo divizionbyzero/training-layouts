@@ -1,0 +1,133 @@
+//colors
+$color_storm_dust_approx: #656565;
+$color_tapa_approx: #777;
+$white: white;
+$color_suva_gray_approx: #888;
+$color_dove_gray_approx: rgb(112, 112, 112);
+$color_concord_approx: rgb(124, 124, 124);
+
+//@extend-elements
+//original selectors
+//h1:before, h1:after
+%extend_1 {
+    background-color: $white;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+//original selectors
+//header, footer
+%extend_2 {
+     font-size: 4vw;
+     text-align: center;
+     height: 150px;
+     background-color: $color_suva_gray_approx;
+ }
+
+//original selectors
+//.header>span, .footer>span
+%extend_3 {
+     line-height: 150px;
+ //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+ text-shadow: $color_storm_dust_approx 1px 1px, $color_storm_dust_approx 2px 2px, $color_storm_dust_approx 3px 3px, $color_storm_dust_approx 4px 4px, $color_storm_dust_approx 5px 5px, $color_storm_dust_approx 6px 6px, $color_storm_dust_approx 7px 7px, $color_storm_dust_approx 8px 8px, $color_storm_dust_approx 9px 9px, $color_storm_dust_approx 10px 10px, $color_storm_dust_approx 11px 11px, $color_storm_dust_approx 12px 12px, $color_storm_dust_approx 13px 13px, $color_storm_dust_approx 14px 14px, $color_storm_dust_approx 15px 15px, $color_storm_dust_approx 16px 16px, $color_storm_dust_approx 17px 17px, $color_storm_dust_approx 18px 18px, $color_storm_dust_approx 19px 19px, $color_storm_dust_approx 20px 20px, $color_storm_dust_approx 21px 21px, $color_dove_gray_approx 22px 22px, $color_concord_approx 23px 23px, $color_suva_gray_approx 24px 24px;
+     background-color: $color_suva_gray_approx;
+     height: 100%;
+     width: 100%;
+     font-size: 0.9em;
+     text-align: center;
+ }
+
+//original selectors
+//.header>span::before, .footer>span::before, .header>span::after, .footer>span::after
+%extend_4 {
+     content: '\25c9';
+     font-size: 0.5em;
+     display: inline-block;
+     padding: 0 15px;
+     margin-top: -10px;
+     vertical-align: middle;
+ //Instead of the line below you could use @includetext-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+ text-shadow: $color_storm_dust_approx 1px 1px, $color_storm_dust_approx 2px 2px, $color_storm_dust_approx 3px 3px, $color_dove_gray_approx 4px 4px, $color_concord_approx 5px 5px, $color_suva_gray_approx 6px 6px;
+ }
+
+
+.clearfix {
+    *zoom: 1;
+&:before {
+     content: " ";
+     display: table;
+ }
+&:after {
+     content: " ";
+     display: table;
+     clear: both;
+ }
+}
+body {
+    height: 100%;
+}
+html {
+    height: 100%;
+}
+.wrap {
+    height: auto;
+    min-height: 100%;
+    margin: 0 20px;
+    color: $color_storm_dust_approx;
+}
+.main {
+    margin-top: 10px;
+    padding-bottom: 150px;
+}
+.onecolumn {
+    width: 100%;
+    min-height: 300px;
+    background-color: $color_tapa_approx;
+}
+h1 {
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+&:before {
+ @extend %extend_1;
+     right: 0.5em;
+     margin-left: -50%;
+ }
+&:after {
+ @extend %extend_1;
+     left: 0.5em;
+     margin-right: -50%;
+ }
+}
+header {
+@extend %extend_2;
+}
+footer {
+@extend %extend_2;
+}
+.header>span {
+@extend %extend_3;
+}
+.footer>span {
+@extend %extend_3;
+}
+.header>span::before {
+@extend %extend_4;
+}
+.footer>span::before {
+@extend %extend_4;
+}
+.header>span::after {
+@extend %extend_4;
+}
+.footer>span::after {
+@extend %extend_4;
+}
+.footer {
+    position: relative;
+    margin: -150px 20px 0;
+}

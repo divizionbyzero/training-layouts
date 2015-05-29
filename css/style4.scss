@@ -1,0 +1,122 @@
+//colors
+$white: white;
+$white_70: rgba(255, 255, 255, .7);
+$color_chartreuse_approx: lawngreen;
+$coral: coral;
+$gold: gold;
+$color_suva_gray_approx: rgba(135, 135, 135, 1);
+$black_20: rgba(0, 0, 0, 0.2);
+$white_40: rgba(255, 255, 255, 0.4);
+$color_storm_dust_approx: #666;
+$color_fuscous_gray_approx: #555;
+
+//@extend-elements
+//original selectors
+//#div1, #div2, #div3
+%extend_1 {
+    padding: 15px 0;
+    height: 100px;
+    width: auto;
+}
+
+//original selectors
+//#div-sel, #sel, #top, #right, #bottom, #left, #but
+%extend_2 {
+     display: block;
+     width: 100px;
+     margin: 20px;
+     color: $white;
+ //Instead of the line below you could use @includebox-sizing($bs)
+ box-sizing: border-box;
+     padding: 2px 5px;
+ //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+ border-radius: 3px;
+     outline-color: $color_chartreuse_approx;
+     text-overflow: clip;
+     letter-spacing: 0.5px;
+     background: $color_suva_gray_approx;
+ //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+ box-shadow: 2px 2px 2px 0 $black_20 inset;
+ //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+ transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+ }
+
+
+.onecolumn {
+    background-color: $white;
+}
+.change {
+    position: fixed;
+    z-index: 999;
+    background-color: $white_70;
+//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+border-radius: 2px;
+    top: 70px;
+    right: 25px;
+}
+#div1 {
+@extend %extend_1;
+    margin-bottom: 10px;
+    background-color: $color_chartreuse_approx;
+}
+#div2 {
+@extend %extend_1;
+    margin-bottom: 10px;
+    background-color: $coral;
+}
+#div3 {
+@extend %extend_1;
+    background-color: $gold;
+}
+#div-sel {
+@extend %extend_2;
+}
+#sel {
+@extend %extend_2;
+}
+#top {
+@extend %extend_2;
+}
+#right {
+@extend %extend_2;
+}
+#bottom {
+@extend %extend_2;
+}
+#left {
+@extend %extend_2;
+}
+#but {
+@extend %extend_2;
+    background-color: $color_chartreuse_approx;
+    padding: 5px;
+//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+box-shadow: 2px 2px 2px 0 $white_40 inset;
+    font-size: 16px;
+&:hover {
+     cursor: pointer;
+ //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+ box-shadow: 2px 2px 2px 0 $black_20 inset;
+     color: $color_storm_dust_approx;
+ }
+}
+details {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 999;
+    background-color: $white;
+    padding: 5px 15px;
+//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+border-radius: 5px;
+    border: none;
+    width: 140px;
+    outline: none;
+}
+details[open] {
+    background-color: $color_chartreuse_approx;
+}
+.name_summary {
+    color: $color_fuscous_gray_approx;
+}

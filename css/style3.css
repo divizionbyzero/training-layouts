@@ -1,0 +1,39 @@
+#one, #two, #three {
+  min-height: 250px;
+  background-color: #777;
+  width: 32%;
+  margin-bottom: 10px; }
+
+.main {
+  margin-top: 10px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: space-between; }
+
+#one {
+  background-color: rgba(124, 252, 0, 0.62); }
+
+#two {
+  background-color: rgba(0, 139, 139, 0.75); }
+
+#three {
+  background-color: rgba(255, 140, 0, 0.68); }
+
+@media screen and (max-width: 640px) {
+  .main {
+    flex-flow: column wrap;
+    align-content: space-between; }
+
+  #one {
+    width: 100%;
+    min-height: 200px; }
+
+  #two {
+    width: 100%;
+    min-height: 200px; }
+
+  #three {
+    width: 100%;
+    min-height: 200px; } }
+
+/*# sourceMappingURL=style3.css.map */

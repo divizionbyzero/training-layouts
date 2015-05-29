@@ -1,0 +1,19 @@
+//colors
+$color_elm_approx: #1a8c84;
+$white:  white;
+
+.onecolumn {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+.loadjson {
+    width: 60px;
+    height: 20px;
+    background-color: $color_elm_approx;
+    cursor: pointer;
+}
+td {
+    border: 1px solid $white;
+    padding: 5px;
+}

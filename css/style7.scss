@@ -1,0 +1,29 @@
+//colors
+$color_ironside_gray_approx: #676767;
+$white:  white;
+
+.onecolumn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+table {
+    margin: 20px 10vw;
+    display: inline-block;
+}
+td {
+    padding: 5px 10px;
+    width: 80vw;
+}
+.align-cent {
+    background-color: $color_ironside_gray_approx;
+}
+tr {
+    line-height: 1.5em;
+    border-bottom: 1px dashed $white;
+&:first-of-type {
+     border-top: 1px dashed $white;
+ }
+&:last-of-type {
+     border-bottom: none;
+ }
+}

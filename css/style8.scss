@@ -1,50 +1,48 @@
-//colors
-$color_chartreuse_approx: lawngreen;
-$color_blue_chill_approx: darkcyan;
+@import "main-style";
 
-.onecolumn {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 15px;
-}
 .description-select {
-    text-align: center;
+  text-align: center;
 }
+
 .lists-container {
-    display: flex;
-    flex-flow: column wrap;
+  @include display-content(flex, center, column, wrap);
 }
+
 .list {
-    display: inline-flex;
-    justify-content: center;
+  @include display-content(inline-flex, center, row, nowrap);
 }
+
 .list-item {
-    width: 6%;
-    height: 40px;
-    background-color: $color_chartreuse_approx;
-    margin: 5px;
-&:only-of-type {
-     background-color: $color_blue_chill_approx;
- }
+  width: 6%;
+  height: 40px;
+  background-color: $one;
+  margin: 5px;
+  &:only-of-type {
+    background-color: $two;
+  }
 }
+
 #list-2 .list-item:nth-last-of-type(10):first-of-type {
-    background-color: $color_blue_chill_approx;
+  background-color: $two;
 }
+
 #list-3 .list-item:nth-last-of-type(10):first-of-type {
-    background-color: $color_blue_chill_approx;
-~ .list-item {
-      background-color: $color_blue_chill_approx;
+  background-color: $two;
+  ~ .list-item {
+    background-color: $two;
   }
 }
+
 #list-4 .list-item:nth-last-child(n+9) {
-    background-color: $color_blue_chill_approx;
-~ .list-item {
-      background-color: $color_blue_chill_approx;
+  background-color: $two;
+  ~ .list-item {
+    background-color: $two;
   }
 }
+
 #list-5 .list-item:nth-last-child(-n+12):first-child {
-    background-color: $color_blue_chill_approx;
-~ .list-item {
-      background-color: $color_blue_chill_approx;
+  background-color: $two;
+  ~ .list-item {
+    background-color: $two;
   }
 }

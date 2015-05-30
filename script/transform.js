@@ -5,6 +5,7 @@ $(document).ready(function () {
     function transform(name, num, sel) {
         $(".select" + sel + ">.select-item:nth-of-type(" + num + ")").hover(
             function () {
+                console.log($('.demo' + sel));
                 $('.demo' + sel).addClass(name + num);
             },
             function () {
@@ -12,25 +13,7 @@ $(document).ready(function () {
             });
     }
 
-    //function scaleTransform(num) {
-    //    $('.select2>.select-item:nth-child('+num+')').hover(
-    //        function() {
-    //            $('.demo2').addClass('scale'+num);
-    //        },
-    //        function () {
-    //            $('.demo2').removeClass('scale'+num);
-    //        });
-    //}
-    //function skewTransform(num) {
-    //    $('.select3>.select-item:nth-child('+num+')').hover(
-    //        function() {
-    //            $('.demo3').addClass('skew'+num);
-    //        },
-    //        function () {
-    //            $('.demo3').removeClass('skew'+num);
-    //        });
-    //}
-    $('.select1>.select-item').mouseenter(function () {
+    $('.select1>.select-item').bind('mouseover', function (e) {
         transform("rotate", $(this).data("number"), 1);
     });
     $('.select2>.select-item').mouseenter(function () {

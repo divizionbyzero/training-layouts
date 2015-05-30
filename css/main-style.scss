@@ -1,6 +1,18 @@
 $white: #fff;
 $background: #888;
 $shadow-head-text: #656565;
+$li-background: cadetblue;
+$one: #7CFC00;
+$two: #008B8B;
+$three: #FF8C00;
+$light-sea: lightseagreen;
+$light-sky: lightskyblue;
+$light-gr: lightgreen;
+$light-yellow: #fcff7f;
+$dark-sea: darken($light-sea, 5%);
+$dark-sky: darken($light-sky, 5%);
+$dark-gr: darken($light-gr, 5%);
+$dark-yellow: darken($light-yellow, 5%);
 
 @function make-long-shadow($color, $through) {
   $val: 0px 0px $color;
@@ -13,6 +25,13 @@ $shadow-head-text: #656565;
     }
   }
   @return $val;
+}
+
+
+@mixin display-content($display, $justify, $direction, $wrap, $align-justify: justify) {
+  display: $display;
+  flex-flow: $direction $wrap;
+  #{$align-justify}-content: $justify;
 }
 
 @mixin long-shadow($color,$through ) {
@@ -48,7 +67,7 @@ $shadow-head-text: #656565;
 .clearfix {
   *zoom: 1;
   &::before, &::after {
-    @include content-before-after(" ", table);
+    @include content-before-after("", table);
   }
   &::after {
     clear: both;
@@ -123,5 +142,9 @@ h1 {
 
 .onecolumn {
   width: 100%;
-  min-height: 300px;
+  min-height: 380px;
+  background-color: $background;
+  margin-bottom: 10px;
+  padding:15px;
+
 }

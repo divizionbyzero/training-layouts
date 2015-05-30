@@ -2,7 +2,7 @@
 .clearfix {
   *zoom: 1; }
   .clearfix::before, .clearfix::after {
-    content: " ";
+    content: "";
     display: table; }
   .clearfix::after {
     clear: both; }
@@ -66,12 +66,15 @@ h1 {
 
 .onecolumn {
   width: 100%;
-  min-height: 300px; }
+  min-height: 380px;
+  background-color: #888;
+  margin-bottom: 10px;
+  padding: 1; }
 
 .clearfix {
   *zoom: 1; }
   .clearfix::before, .clearfix::after {
-    content: " ";
+    content: "";
     display: table; }
   .clearfix::after {
     clear: both; }
@@ -135,7 +138,10 @@ h1 {
 
 .onecolumn {
   width: 100%;
-  min-height: 300px; }
+  min-height: 380px;
+  background-color: #888;
+  margin-bottom: 10px;
+  padding: 1; }
 
 .list-of-lists {
   display: flex;

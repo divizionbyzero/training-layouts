@@ -1,15 +1,5 @@
 @import "main-style";
 
-$li-background: cadetblue;
-$one: #7CFC00;
-$two: #008B8B;
-$three: #FF8C00;
-
-@mixin display-content($display, $justify, $direction, $wrap, $align-justify: justify) {
-    display: $display;
-    flex-flow: $direction $wrap;
-    #{$align-justify}-content: $justify;
-}
 
 .list-of-lists {
     @include display-content(flex, center, row, wrap, align );

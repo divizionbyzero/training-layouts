@@ -1,139 +1,113 @@
-//colors
-$color_silver_chalice_approx: #aaa;
-$color_chartreuse_approx: lawngreen;
-$color_elm_approx: #1a8c84;
-$color_glacier_approx: #71a6c9;
+@import "main-style";
 
-.onecolumn {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 15px;
+@mixin include-transform($name, $val...) {
+    -webkit-transform: #{$name}#{$val};
+    -moz-transform:  #{$name}(#{$val});
+    -ms-transform:  #{$name}(#{$val});
+    -o-transform:  #{$name}#{$val};
+    transform:  #{$name}#{$val};
 }
+
 .container {
     width: 80%;
     height: 300px;
-    background-color: $color_silver_chalice_approx;
+    background-color: lighten($background, 15%);
     margin: 0 auto 25px;
 }
 h1 {
     line-height: 15vh;
 }
 .select-list {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    @include display-content(flex,space-between, row, nowrap);
 }
 .select-item {
-    background-color: $color_chartreuse_approx;
+    background-color: $one;
     height: 50px;
     width: 18%;
 &:hover {
-     background-color: $color_glacier_approx;
+     background-color: lighten($one, 20%);
  }
 }
 .demo {
-    background-color: $color_elm_approx;
+    background-color: $two;
     width: 20vw;
     height: 15vh;
     margin: 5% auto;
 }
 .rotate1 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: rotate(15deg);
+    @include include-transform(rotate, "("15deg")");
 }
 .rotate2 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: rotate(45deg);
+    @include include-transform(rotate, "("45deg")");
 }
 .rotate3 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: rotate(180deg);
+    @include include-transform(rotate, "("160deg")");
 }
 .rotate4 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: rotate(-45deg);
+    @include include-transform(rotate, "("45deg")");
 }
 .rotate5 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: rotate(259deg);
+    @include include-transform(rotate, "("290deg")");
 }
 .scale1 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: scale(1, 2);
+    @include include-transform(scale, "("1,2")");
 }
 .scale2 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: scale(2, 1);
+    @include include-transform(scale, "("2,1")");
 }
 .scale3 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: scale(1.5, 1.5);
+    @include include-transform(scale, "("1.5,1.5")");
 }
 .scale4 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: scale(0.5, 1.2);
+    @include include-transform(scale, "("0.5,1.2")");
 }
 .scale5 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: scale(1.2, 0.5);
+    @include include-transform(scale, "("1.2,0.5")");
 }
 .skew1 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: skew(15deg, 0deg);
+    @include include-transform(skew, "("15deg,0deg")");
 }
 .skew2 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: skew(45deg, 44deg);
+    @include include-transform(skew, "("45deg,25deg")");
 }
 .skew3 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: skew(-25deg, -25deg);
+    @include include-transform(skew, "("-25deg,-25deg")");
 }
 .skew4 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: skew(0deg, -45deg);
+    @include include-transform(skew, "("0deg,-45deg")");
+
 }
 .skew5 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: skew(29deg, 15deg);
+    @include include-transform(skew, "("29deg,15deg")");
+
 }
 .translate1 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: translate(15px, 0);
+    @include include-transform(translate, "("15px, 0")");
 }
 .translate2 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: translate(45px, 44px);
+    @include include-transform(translate, "("45px, 44px")");
 }
 .translate3 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: translate(-25px, -25px);
+    @include include-transform(translate, "("25px, -25px")");
 }
 .translate4 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: translate(0, -150px);
+    @include include-transform(translate, "("0, -150px")");
 }
 .translate5 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: translate(29px, 15px);
+    @include include-transform(translate, "("29px, 15px")");
 }
 .matrix1 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25);
+    @include include-transform(matrix, "("1.5, 0.7, 1.4, 1.4, 20, 25")");
 }
 .matrix2 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25);
+    @include include-transform(matrix, "("1.5, 0.7, 1.4, 1.4, 20, 25")");
 }
 .matrix3 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25);
+    @include include-transform(matrix, "("1.5, 0.7, 1.4, 1.4, 20, 25")");
 }
 .matrix4 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25);
+    @include include-transform(matrix, "("1.5, 0.7, 1.4, 1.4, 20, 25")");
 }
 .matrix5 {
-//Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-transform: matrix(1.5, 0.7, 1.4, 1.4, 20, 25);
+    @include include-transform(matrix, "("1.5, 0.7, 1.4, 1.4, 20, 25")");
 }
